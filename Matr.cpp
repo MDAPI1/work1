@@ -50,7 +50,7 @@ void trans(double matr[10][10], int n, int m)
     int a;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < m; j++)
+        for (int j = i; j < m; j++)
         {
             a = matr[i][j];
             matr[i][j] = matr[j][i];
