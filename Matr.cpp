@@ -1,6 +1,3 @@
-
-﻿// Matr.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
 #include <iostream>
 #include <math.h>
 #include <conio.h>
@@ -11,10 +8,12 @@
 using namespace std;
 
 
-void vvod(double matr[10][10], int& i, int& j)
-{
 
-    cout << "Ввод матрицы:" << endl;
+void vvod(double matr[10][10], int&i,int&j)
+{
+    setlocale(LC_ALL, "Russian");
+    
+    cout << "Vvod matr:" << endl;
     cout << "Введите количество строк в вашей матрице - " << endl;
     cin >> i;
 
@@ -28,11 +27,11 @@ void vvod(double matr[10][10], int& i, int& j)
             cout << "элемент " << m << " строки " << n << " ряда  = ";
             cin >> matr[m][n];
         }
-    }
-
+    }    
+    
 }
 
-void out(double matr[10][10], int n, int m)
+void out (double matr[10][10], int n, int m)
 {
     for (int i = 0; i < n; i++)
     {
@@ -46,33 +45,46 @@ void out(double matr[10][10], int n, int m)
 }
 
 
+void trans(double matr[10][10], int n, int m)
+{
+    int a;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            a = matr[i][j];
+            matr[i][j] = matr[j][i];
+            matr[j][i] = a;
+        }
+    }
+}
+
 
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    setlocale(LC_ALL, "RU");
+    setlocale(LC_ALL, "Russian");
     int i, j, h, l;
     double matr1[10][10];
     double matr2[10][10];
+    vvod(matr1, i, j);
+    vvod(matr2, h, l);
     cout << endl;
     cout << "Кол-во строк в матрцие 1 = " << i << endl;
     cout << "Кол-во столбцов в матрцие 1 = " << j << endl;
     cout << "Кол-во строк в матрцие 2 = " << h << endl;
     cout << "Кол-во столбцов в матрцие 2 = " << l << endl;
 
- 
+    out(matr1, i, j);
+    out(matr2, h, l);
 
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
+    trans(matr1, i, j);
+    out(matr1, i, j);
 }
 
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
