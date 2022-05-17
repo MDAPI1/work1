@@ -1,0 +1,4 @@
+﻿  Matr.cpp
+C:\Users\Андрей\Desktop\MATR\Matr\Matr\Matr.cpp(2,1): error C3872: 0xbb: этот символ невозможно использовать в идентификаторе
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\sal.h(2361,1): error C2144: синтаксическая ошибка: перед "int" требуется ";"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\sal.h(2361,8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
